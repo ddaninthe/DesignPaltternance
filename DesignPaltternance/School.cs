@@ -2,7 +2,7 @@
 
 namespace DesignPaltternance
 {
-    public class Class1
+    public class School
     {
     }
 }
