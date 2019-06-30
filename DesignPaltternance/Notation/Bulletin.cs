@@ -16,7 +16,9 @@ namespace DesignPaltternance.Notation
             Notes = new Dictionary<string, Notes>(classe.Matieres.Count);
             foreach (Matiere m in classe.Matieres)
             {
-                Notes.Add(m.GetName(), new Notes());
+                Notes n = new Notes();
+                n.AddObserver(this);
+                Notes.Add(m.GetName(), n);
             }
         }
 

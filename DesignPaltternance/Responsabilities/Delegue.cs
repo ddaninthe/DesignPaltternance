@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DesignPaltternance.Responsabilities
 {
-    class Delegue : Responsability
+    public class Delegue : Responsability
     {
         private static readonly int OPEN = 2;
 

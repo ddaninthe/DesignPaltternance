@@ -11,16 +11,14 @@ namespace DesignPaltternance
         public List<Responsability> Responsabilities { get; }
         public Bulletin Bulletin { get; }
         public Classe Classe { get; }
+        public string Name { get; }
 
-        Eleve(Classe classe)
+        internal Eleve(string name, Classe classe)
         {
+            this.Name = name;
             this.Classe = classe;
             Bulletin = new Bulletin(classe);
-        }
-
-        void AddResponsability(Responsability responsability)
-        {
-            Responsabilities.Add(responsability);
+            Responsabilities = new List<Responsability>();
         }
 
         public void AddNote(string matiere, int note, int coef)
@@ -28,6 +26,10 @@ namespace DesignPaltternance
             Bulletin.AddNote(matiere, new Note(note, coef));
         }
 
+        public float GetMoyenne()
+        {
+            return Bulletin.GetMoyenneGenerale();
+        }
 
         public int GetOpens()
         {

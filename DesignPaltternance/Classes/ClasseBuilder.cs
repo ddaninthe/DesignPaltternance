@@ -6,7 +6,7 @@ using DesignPaltternance.Classes.Niveaux;
 
 namespace DesignPaltternance.Classes
 {
-    public class ClasseBuilder
+    internal class ClasseBuilder
     {
         private static Dictionary<string, Filiere> Filieres = new Dictionary<string, Filiere>();
         private static Dictionary<string, Niveau> Niveaux = new Dictionary<string, Niveau>();
@@ -14,7 +14,7 @@ namespace DesignPaltternance.Classes
         private Filiere Filiere;
         private Niveau Niveau;
 
-        public ClasseBuilder(string niveauName)
+        internal ClasseBuilder(string niveauName)
         {
             if (!Niveaux.ContainsKey(niveauName))
             {
@@ -32,7 +32,7 @@ namespace DesignPaltternance.Classes
             this.Niveau = Niveaux[niveauName];
         }
 
-        public void filiere(string filiereName)
+        public ClasseBuilder filiere(string filiereName)
         {
             if (!Filieres.ContainsKey(filiereName))
             {
@@ -48,6 +48,7 @@ namespace DesignPaltternance.Classes
             }
 
             this.Filiere = Filieres[filiereName];
+            return this;
         }
 
         public Classe build()

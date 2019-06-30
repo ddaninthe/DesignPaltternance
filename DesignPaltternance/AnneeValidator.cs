@@ -9,12 +9,12 @@ namespace DesignPaltternance
     {
         public bool Validate(Premiere premiere, IEleve eleve)
         {
-            return eleve.Bulletin.GetMoyenneGenerale() > 9;
+            return eleve.Bulletin.GetMoyenneGenerale() >= 9;
         }
 
         public bool Validate(Quatrieme quatrieme, IEleve eleve)
         {
-            return eleve.Bulletin.GetMoyenneGenerale() > 11;
+            return eleve.Bulletin.GetMoyenneGenerale() >= 11;
         }
     }
 }
