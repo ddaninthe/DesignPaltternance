@@ -14,5 +14,6 @@ namespace DesignPaltternance
         Classe Classe { get; }
 
         int GetOpens();
+        void AddNote(string matiere, int coef, float note);
     }
 }

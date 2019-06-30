@@ -20,6 +20,16 @@ namespace DesignPaltternance.Notation
             }
         }
 
+        internal bool AddNote(string matiere, Note note)
+        {
+            if (Notes.ContainsKey(matiere))
+            {
+                Notes[matiere].AddNote(note);
+                return true;
+            }
+            return false;
+        }
+
         public float GetMoyenneGenerale()
         {
             return MoyenneGenerale;
