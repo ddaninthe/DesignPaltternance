@@ -23,7 +23,7 @@ namespace DesignPaltternance
             Responsabilities.Add(responsability);
         }
 
-        void AddNote(string matiere, int note, int coef)
+        public void AddNote(string matiere, int note, int coef)
         {
             Bulletin.AddNote(matiere, new Note(note, coef));
         }
