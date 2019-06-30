@@ -15,6 +15,7 @@ namespace DesignPaltternance
         Eleve(Classe classe)
         {
             this.Classe = classe;
+            Bulletin = new Bulletin(classe);
         }
 
         void AddResponsability(Responsability responsability)
@@ -22,7 +23,7 @@ namespace DesignPaltternance
             Responsabilities.Add(responsability);
         }
 
-        private int GetOpens()
+        public int GetOpens()
         {
             int opens = 0;
             foreach (Responsability responsability in Responsabilities)

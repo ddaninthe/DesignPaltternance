@@ -12,5 +12,10 @@ namespace DesignPaltternance.Classes.Niveaux
         {
             return Name;
         }
+
+        public bool Accept(Validator validator, IEleve eleve)
+        {
+            return validator.Validate(this, eleve);
+        }
     }
 }

@@ -4,7 +4,8 @@ using System.Text;
 
 namespace DesignPaltternance.Matieres
 {
-    interface Matiere
+    public interface Matiere
     {
+        string GetName();
     }
 }

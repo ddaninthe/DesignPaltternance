@@ -12,5 +12,7 @@ namespace DesignPaltternance
         List<Responsability> Responsabilities { get; }
         Bulletin Bulletin { get; }
         Classe Classe { get; }
+
+        int GetOpens();
     }
 }

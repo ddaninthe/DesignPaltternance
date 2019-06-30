@@ -20,6 +20,7 @@ namespace DesignPaltternanceTests
 
             Assert.AreEqual(AL.Name, classe.Filiere.GetName());
             Assert.AreEqual(Quatrieme.Name, classe.Niveau.GetName());
+            Assert.AreEqual(2, classe.Matieres.Count);
         }
 
         [TestMethod]
@@ -28,6 +29,7 @@ namespace DesignPaltternanceTests
             Classe classe = new ClasseBuilder(Premiere.Name).build();
             Assert.AreEqual(Premiere.Name, classe.Niveau.GetName());
             Assert.IsNull(classe.Filiere);
+            Assert.AreNotEqual(0, classe.Matieres.Count);
         }
     }
 }

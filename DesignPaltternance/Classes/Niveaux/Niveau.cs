@@ -7,5 +7,6 @@ namespace DesignPaltternance.Classes.Niveaux
     public interface Niveau
     {
         string GetName();
+        bool Accept(Validator validator, IEleve eleve);
     }
 }

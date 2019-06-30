@@ -4,9 +4,9 @@ using System.Text;
 
 namespace DesignPaltternance.Matieres
 {
-    public class DesignPattern : Matiere
+    public class C : Matiere
     {
-        public const string Name = "DesignPattern";
+        public const string Name = "C";
 
         public string GetName()
         {
